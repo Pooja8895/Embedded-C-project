@@ -53,10 +53,10 @@ int Avg_Right = (RightDown+RightTop)/2;
 int Diff_Vert = Avg_Top - Avg_Down;
 int Diff_Hor = Avg_Left - Avg_Right;
 
-// Checking If the Difference in the Vertical Tolerance else Change Vertical Angle
+ //Checking If the Difference in the Vertical Tolerance else Change Vertical Angle
 
-//if(-1*tol > Diff_Vert || Diff_Vert > tol)
-//{
+if(-1*tol > Diff_Vert || Diff_Vert > tol)
+{
   if(Avg_Top > Avg_Down)
   {
     ServoOV = --ServoOV;
@@ -74,12 +74,12 @@ int Diff_Hor = Avg_Left - Avg_Right;
     }
   }
   Vertical.write(ServoOV);
-//}
+}
 
-// Check If the Difference is in The Horizontal Tolerance Level else Change the Horizontal Angle
+//Check If the Difference is in The Horizontal Tolerance Level else Change the Horizontal Angle
 
-//if (-1*tol > Diff_Hor || Diff_Hor > tol)
-//{
+if (-1*tol > Diff_Hor || Diff_Hor > tol)
+{
   
   if(Avg_Left > Avg_Right)
   {
